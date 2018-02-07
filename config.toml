@@ -1,0 +1,27 @@
+[parity]
+
+chain = "happyshare-spec.json"
+base_path = "/data/parity_hs"
+
+[network]
+port = 30306
+warp = false
+
+[rpc]
+port=8547
+disable = false
+interface = "local"
+apis = ["web3", "personal", "eth", "net", "parity","parity_set", "traces", "rpc", "secretstore","signer","parity_accounts"]
+hosts = ["none"]
+
+[ipc]
+disable = false
+apis = ["web3", "eth", "net", "parity", "parity_accounts", "personal", "traces", "rpc", "secretstore","signer"]
+
+[websockets]
+disable = false
+port = 8456
+
+[ui]
+disable = false
+port = 8180
