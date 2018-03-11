@@ -11,7 +11,8 @@ warp = false
 port=8547
 disable = false
 interface = "local"
-apis = ["web3", "personal", "eth", "net", "parity","parity_set", "traces", "rpc", "secretstore","signer","parity_accounts"]
+cors = "all"
+apis = ["web3", "personal", "eth", "net","parity","parity_set", "traces", "rpc", "secretstore","signer","parity_accounts"]
 hosts = ["none"]
 
 [ipc]
@@ -21,7 +22,26 @@ apis = ["web3", "eth", "net", "parity", "parity_accounts", "personal", "traces",
 [websockets]
 disable = false
 port = 8456
+origins = ["all"]  
+hosts = ["all"] 
 
 [ui]
 disable = false
 port = 8180
+
+
+[footprint]
+tracing = "auto"
+pruning = "auto"
+pruning_history = 64
+pruning_memory = 500
+cache_size_db = 64
+cache_size_blocks = 8
+cache_size_queue = 50
+cache_size_state = 25
+cache_size = 128 # Overrides above caches with total size
+fast_and_loose = false
+db_compaction = "ssd"
+fat_db = "on"
+scale_verifiers = true
+num_verifiers = 6
